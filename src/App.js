@@ -25,8 +25,7 @@ const App = () => {
   useEffect(() => {
     if (time) {
       const rest = laps.slice(0,laps.length-1)    
-      let last = laps[laps.length-1]
-      last = time - rest.reduce((acc,x) => acc+x, 0)
+      let last =  time - rest.reduce((acc,x) => acc+x, 0)
       setLaps([...rest,last])
     }
     else {
